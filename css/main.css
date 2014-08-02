@@ -1,0 +1,146 @@
+* {
+	border-color: red;
+}
+
+
+
+/****************
+HEADER
+****************/
+
+#header {
+	height: 150px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 0;
+	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
+	color: #fff;
+	z-index: 3;
+	position: fixed;
+}
+
+#header-text h1 {
+	text-align: right;
+	font-size: 1.4em;
+	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
+	padding-top: 5px;
+	padding-left: 10px;
+	color: #fff;
+	margin-top: -30px;
+}
+
+h1 {
+	text-align: left;
+	margin-left: 100px;
+	font-size: 2.0em;
+	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
+	padding-top: 10px;
+	padding-left: 10px;
+	color: #ecf0f1;
+	font-weight: bold;
+	z-index: 2;
+	position: relative;
+}
+
+#icon-tray {
+	margin-top: 150px;
+	padding: 25px 0 25px 0;
+	text-align: center;
+}
+
+#facebook {background-color: #3B5998; }
+#linkedin {background-color: #007FB1; }
+#twitter {background-color: #00ACED; }
+#instagram {background-color: #3F729B; }
+#google-plus {background-color: #D14836; }
+#pinterest {background-color: #CB2027; }
+#spotify {background-color: #80B719; }
+#treehouse {background-color: #7FA24C; }
+#github {background-color: #000000; }
+#email {background-color: #7f8c8d; }
+#jquery {color: #3B5998; }
+#jqueryui {color: #3B5998; }
+#html5 {color: #F06529; }
+#css3 {color: #3B5998; }
+#rails {color: #3B5998; }
+#php {color: #6181B6; }
+
+
+
+.icon {
+	height: 50px;
+	width: auto;
+	border-radius: 100%;
+}
+
+/***************
+BACKGROUND
+***************/
+
+body {
+	background-image: url('../images/wood-background.jpg');
+	background-size: 1000px;
+}
+
+
+
+/**************
+INSTRUCTIONS
+**************/
+
+h2 {
+	font-size: 1.7em;
+	padding: 32px 0 50px 0;	
+	font-weight: bold;
+	font-family: 'Arvo', 'Georgia' Helvetica, sans-serif;
+	color: #000;
+}
+
+form {
+	padding-top: 5px;
+	height: 15px;
+	}
+
+button {
+	width: 80px;
+	height: 20px;
+}
+
+#cross {
+	color: red;
+}
+
+#check {
+	color: green;
+}
+
+
+/**************
+SHOPPING LIST
+**************/
+
+#list-container {
+	text-align: right;
+	margin-top: 85px;
+	margin-left: 405px;
+	margin-bottom: 150px;
+	background-image: url('../images/list.jpg');
+	display: block;
+	position: relative;
+	/*-webkit-transform: rotate(5deg);
+  	-moz-transform: rotate(5deg);
+ 	-ms-transform: rotate(5deg);
+ 	-o-transform: rotate(5deg);
+  	-webkit-transition: -webkit-transform 1.5s ease-in;
+  	-moz-transition: -webkit-transform 1.5s ease-in;
+  	-ms-transition: -webkit-transform 1.5s ease-in;
+  	-o-transition: -webkit-transform 1.5s ease-in;*/
+}
+
+#list-header {
+	font-family: 'Indie Flower', Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 2.5em;
+	margin-top: 35px;
+	text-align: center;
+}
