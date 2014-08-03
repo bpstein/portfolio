@@ -1,7 +1,59 @@
-* {
-	border-color: red;
+/*SIDEBAR*/ 
+
+#sidebar {
+	background-color: red;
+	display: block;
+	overflow: hidden;
+	top:0px;
+	bottom: 0px;
+	left: 0px;
+	position: fixed;
+	width: 65px;
+	background: #b3dced; /* Old browsers */
+	background: -moz-linear-gradient(top,  #b3dced 0%, #29b8e5 83%, #29b8e5 100%, #bce0ee 100%, #29b8e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3dced), color-stop(83%,#29b8e5), color-stop(100%,#29b8e5), color-stop(100%,#bce0ee), color-stop(100%,#29b8e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#29b8e5',GradientType=0 ); /* IE6-9 */
+
 }
 
+#tool-icons {
+	margin-top: 180px;
+}
+.tool-icon {
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+#facebook {background-color: #3B5998; }
+#linkedin {background-color: #007FB1; }
+#twitter {background-color: #00ACED; }
+#instagram {background-color: #3F729B; }
+#google-plus {background-color: #D14836; }
+#pinterest {background-color: #CB2027; }
+#quora {background-color: #A82400}
+#spotify {background-color: #80B719; }
+#treehouse {background-color: #7FA24C; }
+#github {background-color: #000000; }
+#email {background-color: #7f8c8d; }
+
+#jquery {background-color: none; }
+#javascript {background-color: none;}
+#html5 {background-color: none; }
+#css3 {background-color: none; }
+#rails {background-color: none; }
+#php {background-color: none; }
+
+
+
+.icon {
+	height: 50px;
+	width: auto;
+	border-radius: 30%;
+}
 
 
 /****************
@@ -21,17 +73,15 @@ HEADER
 
 #header-text h1 {
 	text-align: right;
-	font-size: 1.4em;
+	font-size: 1.4em;	
 	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
 	padding-top: 5px;
-	padding-left: 10px;
 	color: #fff;
 	margin-top: -30px;
 }
 
 h1 {
-	text-align: left;
-	margin-left: 100px;
+	text-align: center;
 	font-size: 2.0em;
 	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
 	padding-top: 10px;
@@ -48,99 +98,14 @@ h1 {
 	text-align: center;
 }
 
-#facebook {background-color: #3B5998; }
-#linkedin {background-color: #007FB1; }
-#twitter {background-color: #00ACED; }
-#instagram {background-color: #3F729B; }
-#google-plus {background-color: #D14836; }
-#pinterest {background-color: #CB2027; }
-#spotify {background-color: #80B719; }
-#treehouse {background-color: #7FA24C; }
-#github {background-color: #000000; }
-#email {background-color: #7f8c8d; }
-#jquery {color: #3B5998; }
-#jqueryui {color: #3B5998; }
-#html5 {color: #F06529; }
-#css3 {color: #3B5998; }
-#rails {color: #3B5998; }
-#php {color: #6181B6; }
+/*PROJECT GRID*/
 
-
-
-.icon {
+.project {
+	border-color: red 1px;
 	height: 50px;
-	width: auto;
-	border-radius: 100%;
+	width: 50px;
 }
 
-/***************
-BACKGROUND
-***************/
-
-body {
-	background-image: url('../images/wood-background.jpg');
-	background-size: 1000px;
-}
-
-
-
-/**************
-INSTRUCTIONS
-**************/
-
-h2 {
-	font-size: 1.7em;
-	padding: 32px 0 50px 0;	
-	font-weight: bold;
-	font-family: 'Arvo', 'Georgia' Helvetica, sans-serif;
-	color: #000;
-}
-
-form {
-	padding-top: 5px;
-	height: 15px;
-	}
-
-button {
-	width: 80px;
-	height: 20px;
-}
-
-#cross {
-	color: red;
-}
-
-#check {
-	color: green;
-}
-
-
-/**************
-SHOPPING LIST
-**************/
-
-#list-container {
-	text-align: right;
-	margin-top: 85px;
-	margin-left: 405px;
-	margin-bottom: 150px;
-	background-image: url('../images/list.jpg');
-	display: block;
-	position: relative;
-	/*-webkit-transform: rotate(5deg);
-  	-moz-transform: rotate(5deg);
- 	-ms-transform: rotate(5deg);
- 	-o-transform: rotate(5deg);
-  	-webkit-transition: -webkit-transform 1.5s ease-in;
-  	-moz-transition: -webkit-transform 1.5s ease-in;
-  	-ms-transition: -webkit-transform 1.5s ease-in;
-  	-o-transition: -webkit-transform 1.5s ease-in;*/
-}
-
-#list-header {
-	font-family: 'Indie Flower', Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 2.5em;
-	margin-top: 35px;
-	text-align: center;
+#project-grid {
+	display: inline;
 }
