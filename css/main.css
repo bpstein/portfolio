@@ -5,8 +5,6 @@ body {
 
 /*SIDEBAR*/ 
 
-
-
 #sidebar {
 	display: block;
 	overflow: hidden;
@@ -133,7 +131,7 @@ nav {
 	text-align: center;
 	border: red thin 1px;
 	background-color: white;
-	height: 190px;
+	height: 205px;
 	display: inline;
 	border: 1px red;
 }
@@ -141,4 +139,12 @@ nav {
 #project-grid {
 	background-color: #ecf0f1;
 	display: inline;
+}
+
+.placeholder {
+	height: 160px;
+	width: 120px;
+	background-color: red;
+	padding: 10px 10px 10px 10px;
+	margin: 10px 40px 20px 40px;
 }
