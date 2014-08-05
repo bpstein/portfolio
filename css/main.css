@@ -1,7 +1,13 @@
+/*GENERAL STYLING*/
+body {
+	background-color: #ecf0f1;
+}
+
 /*SIDEBAR*/ 
 
+
+
 #sidebar {
-	background-color: red;
 	display: block;
 	overflow: hidden;
 	top:0px;
@@ -28,26 +34,12 @@
 	padding: 10px 0 10px 0;
 }
 
-#facebook {background-color: #3B5998; }
-#linkedin {background-color: #007FB1; }
-#twitter {background-color: #00ACED; }
-#instagram {background-color: #3F729B; }
-#google-plus {background-color: #D14836; }
-#pinterest {background-color: #CB2027; }
-#quora {background-color: #A82400}
-#spotify {background-color: #80B719; }
-#treehouse {background-color: #7FA24C; }
-#github {background-color: #000000; }
-#email {background-color: #7f8c8d; }
-
-#jquery {background-color: none; }
-#javascript {background-color: none;}
-#html5 {background-color: none; }
-#css3 {background-color: none; }
-#rails {background-color: none; }
-#php {background-color: none; }
-
-
+#jquery {background-color: none; cursor: pointer;}
+#javascript {background-color: none; cursor: pointer;}
+#html5 {background-color: none; cursor: pointer;}
+#css3 {background-color: none; cursor: pointer;}
+#rails {background-color: none; cursor: pointer;}
+#php {background-color: none; cursor: pointer;}
 
 .icon {
 	height: 50px;
@@ -98,15 +90,31 @@ h1 {
 	text-align: center;
 }
 
+#facebook {background-color: #3B5998; }
+#linkedin {background-color: #007FB1; }
+#twitter {background-color: #00ACED; }
+#instagram {background-color: #3F729B; }
+#google-plus {background-color: #D14836; }
+#pinterest {background-color: #CB2027; }
+#quora {background-color: #A82400}
+#spotify {background-color: #80B719; }
+#treehouse {background-color: #7FA24C; }
+#github {background-color: #000000; }
+#email {background-color: #7f8c8d; }
+
 /*PROJECT GRID*/
 
 .project {
+	text-align: center;
 	border-color: red 1px;
-	height: 50px;
+	background-color: white;
+	height: 170px;
+	width: 170px;
 	display: inline;
 	border: 1px red;
 }
 
 #project-grid {
+	background-color: #ecf0f1;
 	display: inline;
 }
