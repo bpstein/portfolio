@@ -60,6 +60,7 @@ HEADER
 	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
 	color: #fff;
 	z-index: 3;
+	margin-top: 15px;
 	/*position: fixed;*/
 }
 
@@ -98,13 +99,13 @@ nav {
 	border-radius: 3px;
 	color: #FFF;
 	display: inline-block;
-	font-size: 11px;
+	font-size: 16px;
 	font-weight: bold;
 	text-decoration: none;
 	cursor: pointer;
 	margin-top: 25px;
 	line-height: normal;
-	padding: 8px 10px;
+	padding: 10px 20px;
 	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 }
 
@@ -120,7 +121,7 @@ nav {
 #instagram {background-color: #3F729B; }
 #google-plus {background-color: #D14836; }
 #pinterest {background-color: #CB2027; }
-#quora {background-color: #A82400}
+#quora {background-color: #A82400; }
 #spotify {background-color: #80B719; }
 #treehouse {background-color: #7FA24C; }
 #github {background-color: #000000; }
@@ -132,8 +133,7 @@ nav {
 	text-align: center;
 	border: red thin 1px;
 	background-color: white;
-	height: 170px;
-	width: 170px;
+	height: 190px;
 	display: inline;
 	border: 1px red;
 }
