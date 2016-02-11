@@ -10,6 +10,61 @@ body {
 SIDEBAR
 ****************/
 
+.sidebar {
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 15%;
+	display: block;
+	background-color: green;
+	position: absolute;
+}
+
+.static-banner {
+	background-color: yellow;
+	z-index: 500000;
+}
+
+/****************
+MASONRY GRID
+****************/
+
+.grid { 
+	width: 85%; 
+	position: fixed;
+}
+
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+
+#streetfighter {
+	background-color: red;
+	height: 150px;
+	width: 250px;
+}
+
+#stackoverflow {
+	background-color: blue;
+	height: 200px;
+	width: 200px;
+}
+
+#gameofthrones {
+	background-color: #CCC;
+	height: 200px;
+	width: 200px;
+}
+
+#datespot {
+	background-color: #DDD;
+	height: 200px;
+	width: 400px;
+}
+
+/****************
+SIDEBAR
+****************/
+
 #sidebar {
 	display: block;
 	overflow: hidden;
@@ -132,6 +187,7 @@ input[type="button"] {
 	height: 205px;
 	display: inline;
 	border: 1px red;
+	background-color: #7f8c8d;
 }
 
 #project-grid {
