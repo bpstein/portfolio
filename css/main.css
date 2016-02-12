@@ -2,180 +2,80 @@
 GENERAL STYLING
 ****************/
 
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
 body {
 	background-color: #ecf0f1;
+	font-family: 'Noto Sans';
 }
+
+
 
 /****************
 SIDEBAR
 ****************/
 
-.sidebar {
+/*#sidebar {
 	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 15%;
+	width: 10%;
 	display: block;
 	background-color: green;
 	position: fixed;
 }
+
+#sidebar li {
+	padding: 20px;
+}*/
+
+.wrapper {min-width:500px;padding: 0 15px;background-color:#dddddd;}
+.navigation {
+	position:fixed;
+	width: 15%;
+}
+.content {background-color:#fff;}
+
+@media (min-width: 767px) { 
+  #navigation{
+    position: fixed;
+  }
+}
+
 
 /****************
 MASONRY GRID
 ****************/
 
 .grid { 
-	width: 85%; 
+	width: 80%; 
 	position: absolute;
 	left: 15%;
 }
 
 .grid-item { 
-	width: 200px; 
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	height: 200px;
+	line-height: 200px;
 }
-
-.grid-item--width2 { width: 400px; }
 
 #streetfighter {
 	background-color: red;
-	height: 150px;
-	width: 250px;
 }
 
 #stackoverflow {
 	background-color: blue;
-	height: 200px;
-	width: 200px;
 }
 
 #gameofthrones {
 	background-color: #CCC;
-	height: 200px;
-	width: 200px;
 }
 
 #datespot {
 	background-color: #DDD;
-	height: 200px;
-	width: 400px;
 }
-
-/****************
-SIDEBAR
-****************/
-
-#sidebar {
-	display: block;
-	overflow: hidden;
-	top:0px;
-	bottom: 0px;
-	left: 0px;
-	position: fixed;
-	width: 65px;
-	background: #b3dced; /* Old browsers */
-	background: -moz-linear-gradient(top,  #b3dced 0%, #29b8e5 83%, #29b8e5 100%, #bce0ee 100%, #29b8e5 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b3dced), color-stop(83%,#29b8e5), color-stop(100%,#29b8e5), color-stop(100%,#bce0ee), color-stop(100%,#29b8e5)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #b3dced 0%,#29b8e5 83%,#29b8e5 100%,#bce0ee 100%,#29b8e5 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#29b8e5',GradientType=0 ); /* IE6-9 */
-
-}
-
-#tool-icons {
-	margin-top: 180px;
-}
-.tool-icon {
-	text-align: center;
-	padding: 10px 0 10px 0;
-}
-
-#jquery {background-color: none; cursor: pointer;}
-#javascript {background-color: none; cursor: pointer;}
-#html5 {background-color: none; cursor: pointer;}
-#css3 {background-color: none; cursor: pointer;}
-#rails {background-color: none; cursor: pointer;}
-#php {background-color: none; cursor: pointer;}
-
-.icon {
-	height: 50px;
-	width: auto;
-	border-radius: 30%;
-}
-
-
-/****************
-HEADER
-****************/
-
-#header {
-	height: 180px;
-	width: 100%;
-/*	background-color: rgba(0, 0, 0, 0.7);
-*/	top: 0;
-	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
-	color: #2c3e50;
-	border-bottom: #7f8c8d dotted 2px;
-	margin-bottom: 25px;
-	z-index: 3;
-	margin-top: 15px;
-	/*position: fixed;*/
-}
-
-h1 {
-	text-align: center;
-	font-size: 2.0em;
-	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
-	padding-top: 10px;
-	padding-left: 10px;
-	color: #7f8c8d;
-	font-weight: bold;
-	z-index: 2;
-	position: relative;
-}
-
-nav {
-	text-align: center;
-}
-.button,
-button,
-input[type="submit"],
-input[type="reset"],	
-input[type="button"] {
-	background-color:rgba(0, 0, 0, 0);
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;	
-	border-radius: 3px;
-	color: #7f8c8d;
-	display: inline-block;
-	font-size: 16px;
-	font-weight: bold;
-	text-decoration: none;
-	cursor: pointer;
-	margin-top: 55px;
-	line-height: normal;
-	padding: 0px 30px;
-	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-}
-
-#icon-tray {
-	margin-top: 150px;
-	padding: 25px 0 25px 0;
-	text-align: center;
-}
-
-#facebook {background-color: #3B5998; }
-#linkedin {background-color: #007FB1; }
-#twitter {background-color: #00ACED; }
-#instagram {background-color: #3F729B; }
-#google-plus {background-color: #D14836; }
-#pinterest {background-color: #CB2027; }
-#quora {background-color: #A82400; }
-#spotify {background-color: #80B719; }
-#treehouse {background-color: #7FA24C; }
-#github {background-color: #000000; }
-#email {background-color: #7f8c8d; }
 
 
 
