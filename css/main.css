@@ -17,12 +17,7 @@ SIDEBAR
 	width: 15%;
 	display: block;
 	background-color: green;
-	position: absolute;
-}
-
-.static-banner {
-	background-color: yellow;
-	z-index: 500000;
+	position: fixed;
 }
 
 /****************
@@ -31,10 +26,14 @@ MASONRY GRID
 
 .grid { 
 	width: 85%; 
-	position: fixed;
+	position: absolute;
+	left: 15%;
 }
 
-.grid-item { width: 200px; }
+.grid-item { 
+	width: 200px; 
+}
+
 .grid-item--width2 { width: 400px; }
 
 #streetfighter {
@@ -178,39 +177,5 @@ input[type="button"] {
 #github {background-color: #000000; }
 #email {background-color: #7f8c8d; }
 
-/*PROJECT GRID*/
 
-.project {
-	text-align: center;
-	border: #7f8c8d thin 1px;
-	background-color: #ecf0f1;
-	height: 205px;
-	display: inline;
-	border: 1px red;
-	background-color: #7f8c8d;
-}
-
-#project-grid {
-	background-color: #7f8c8d;
-	display: inline;
-}
-
-.placeholder {
-	height: 160px;
-	width: 120px;
-	background-color: #7f8c8d;
-	padding: 10px 10px 10px 10px;
-	margin: 10px 40px 20px 40px;
-}
-
-#footer {
-	height: 100px;
-	width: 100%;
-	font-family: 'Arvo', 'Georgia', Helvetica, sans-serif;
-	color: #000;
-	border-top: #7f8c8d dotted 2px;
-	margin-top: 25px;
-	z-index: 3;
-	margin-top: 15px;
-}
 
