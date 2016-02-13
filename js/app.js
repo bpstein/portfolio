@@ -1,10 +1,13 @@
-$(document).ready(function(){
+$(window).load( function() {
 
-	$('.grid').masonry({
-  	// options
-  	itemSelector: '.grid-item',
- 		columnWidth: 200
-	});
+    $('#container').masonry({
+        "itemSelector": ".item",
+        "columnWidth": ".grid-sizer",
+    });
+
+});
+
+$(document).ready(function() {
 
 });
 

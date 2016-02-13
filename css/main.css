@@ -4,78 +4,152 @@ GENERAL STYLING
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
-body {
-	background-color: #ecf0f1;
-	font-family: 'Noto Sans';
+html {
+    overflow-y: scroll;
 }
 
+body {
+    font-family: sans-serif;
+    margin: 0; padding: 0;
+}
+
+/****************
+GRID
+****************/
+
+.item {
+  float: left;
+  position: relative;
+  line-height: 1em;
+}
+
+
+.grid-sizer { width: 20%; }
+.item { width: 20%; }
+
+.image{
+  max-width: 100%;
+  margin: 0;
+  display: block;
+}
+
+.image:after {
+  clear:both;
+}
+
+/****************
+TEXT OVERLAY 
+****************/
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: #fff;
+  display: none;
+}
+
+.overlay .title {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  color: #EEE;
+}
+
+.overlay .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #EEE;
+  text-align: center; 
+  background-color: rgba(0,0,0,0.0);
+  width: 100%;
+  margin: 0;
+}
+
+.overlay .description p {
+  margin: 20px;
+  text-decoration: none;
+}
+
+.item:hover .overlay {
+  display: block;
+  text-decoration: none;
+}
+
+/****************
+RESPONSIVE 
+****************/
+
+@media screen and (max-width: 1224px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 33.33%; }
+  .item { width: 33.33%; }
+}
+
+@media screen and (max-width: 720px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 50%; }
+  .item { width: 50%; }
+}
+
+@media screen and (max-width: 480px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 100%; }
+  .item { width: 100%; }
+}
 
 
 /****************
 SIDEBAR
 ****************/
 
-/*#sidebar {
-	left: 0;
-	top: 0;
-	bottom: 0;
-	width: 10%;
-	display: block;
-	background-color: green;
-	position: fixed;
+/*h1 {
+	font-size: 26px;
+	font-weight: bold;
+	padding: 10px 0px 0px 20px;
 }
 
-#sidebar li {
-	padding: 20px;
-}*/
+h2 {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 0px 0px 20px;
+}
 
-.wrapper {min-width:500px;padding: 0 15px;background-color:#dddddd;}
-.navigation {
+.wrapper {
+	background-color:#dddddd;}
+
+#navigation {
 	position:fixed;
 	width: 15%;
+	background-color: #DDD;
 }
+
+#navigation ul {
+	padding: 10px 0px 0px 20px;
+}
+
+#navigation ul li {
+	padding: 10px 0px 20px 0px;
+}
+
 .content {background-color:#fff;}
 
-@media (min-width: 767px) { 
+@media (min-width: 857px) { 
   #navigation{
     position: fixed;
   }
-}
+}*/
 
 
-/****************
-MASONRY GRID
-****************/
 
-.grid { 
-	width: 80%; 
-	position: absolute;
-	left: 15%;
-}
 
-.grid-item { 
-	width: 200px;
-	height: 200px;
-	text-align: center;
-	height: 200px;
-	line-height: 200px;
-}
 
-#streetfighter {
-	background-color: red;
-}
 
-#stackoverflow {
-	background-color: blue;
-}
-
-#gameofthrones {
-	background-color: #CCC;
-}
-
-#datespot {
-	background-color: #DDD;
-}
 
 
 
