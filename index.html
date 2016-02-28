@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/lightbox.css">
+
 </head>
 
 <body>
@@ -27,18 +27,19 @@
   	</footer>
 	</div>
 
-  <div class="row" id="navbar">
+	<nav class="row" id="navbar">
   	<div class="table">
 	  	<ul>
-	  		<li><a href="#">Front End</a></li>
+	  		<li><a href="#" id="front-end">Front End</a></li>
 	  		<li><a href="#">Back End</a></li>
 	  		<li><a href="#">Full Stack</a></li>
 	  		<li><a href="#">Mobile</a></li>
 	  		<li><a href="#">Projects</a></li>
+	  		<li><a href="#">All</a></li>
 	  	</ul>
 	  </div>
-	</div>
-	
+	</nav>
+
 	<div class="row">
 		<div class="col-md-12 fill">
 			<div id="container">
@@ -47,8 +48,13 @@
 					<div class="corner-stamp">
 					</div>
 
+					<!-- CORNER STAMP (FIXED NAV MENU) -->
+					<div class="item" id="corner-stamp">
+						<img src="img/projects/corner-stamp.png" class="stamp-background">
+					</div>
+
 					<!-- STREETFIGHTER PROJECT -->
-					<div class="item frontend">
+					<div class="item front-end">
 						<img src="img/projects/streetfighter.jpg" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
@@ -61,7 +67,7 @@
 					</div>
 
 					<!-- TICTACTOE PROJECT -->
-					<div class="item frontend">
+					<div class="item front-end">
 						<img src="img/projects/tictactoe.png" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
@@ -74,7 +80,7 @@
 					</div>
 
 					<!-- KITTEN PROJECT -->
-					<div class="item frontend">
+					<div class="item back-end full-stack mobile">
 						<img src="http://placekitten.com/650/450" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
@@ -87,7 +93,7 @@
 					</div>
 
 					<!-- YOUTUBE SEARCH PROJECT -->
-					<div class="item frontend">
+					<div class="item front-end">
 						<img src="img/projects/youtube.jpg" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
@@ -100,21 +106,8 @@
 					</div>
 
 					<!-- KITTEN PROJECT -->
-					<div class="item frontend">
-						<img src="http://placekitten.com/650/450" class="image">
-						<a class="overlay" href="#">
-							<div class="description">
-								<h3 class="title">A Kitten</h3>
-								<div class="overview">
-									<p>Cute kitten pic</p>
-								</div>	
-							</div>
-						</a>
-					</div>
-
-					<!-- KITTEN PROJECT -->
-					<div class="item frontend">
-						<img src="http://placekitten.com/650/450" class="image">
+					<div class="item back-end full-stack mobile">
+						<img src="http://placekitten.com/550/450" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
 								<h3 class="title">A Kitten</h3>
@@ -126,7 +119,7 @@
 					</div>
 
 					<!-- APPLE THUMB SLIDER PROJECT -->
-					<div class="item frontend">
+					<div class="item front-end mobile">
 						<img src="img/projects/applethumbslider.png" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
@@ -139,7 +132,7 @@
 					</div>
 
 					<!-- STACKOVERFLOW PROJECT -->
-					<div class="item frontend">
+					<div class="item front-end">
 						<img src="img/projects/stackoverflow.png" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
@@ -152,52 +145,13 @@
 					</div>
 
 					<!-- HOT OR COLD PROJECT -->
-					<div class="item frontend">
+					<div class="item front-end mobile">
 						<img src="img/projects/hotorcold.png" class="image">
 						<a class="overlay" href="#">
 							<div class="description">
 								<h3 class="title">Hot or Cold App</h3>
 								<div class="overview">
 									<p>Guess the secret number in this hot or cold guessing game</p>
-								</div>	
-							</div>
-						</a>
-					</div>
-
-					<!-- KITTEN PROJECT -->
-					<div class="item frontend">
-						<img src="img/projects/marvelquiz.png" class="image">
-						<a class="overlay" href="#">
-							<div class="description">
-								<h3 class="title">Marvel Quiz App</h3>
-								<div class="overview">
-									<p>Basic JavaScript-based quiz app on weird Marvel facts</p>
-								</div>	
-							</div>
-						</a>
-					</div>
-
-					<!-- CONTENT SLIDER PROJECT -->
-					<div class="item frontend">
-						<img src="img/projects/contentslider.png" class="image">
-						<a class="overlay" href="#">
-							<div class="description">
-								<h3 class="title">Content Slider</h3>
-								<div class="overview">
-									<p>Simple jQuery content slider</p>
-								</div>	
-							</div>
-						</a>
-					</div>
-
-					<!-- FAQSLIDER PROJECT -->
-					<div class="item frontend">
-						<img src="img/projects/FAQslider.png" class="image">
-						<a class="overlay" href="#">
-							<div class="description">
-								<h3 class="title">FAQ Slider</h3>
-								<div class="overview">
-									<p>Accordion slider using jQuery</p>
 								</div>	
 							</div>
 						</a>
@@ -213,7 +167,9 @@
 
 	<!-- JS packages for animations and interaction -->
 	<script src="js/masonry.js"></script>
-	<script src="js/lightbox.js"></script>
+
+	<!-- JSON data for all portfolio projects -->
+	<script src="js/projectData.js"></script>
 
 	<!-- JS script -->
 	<script src="js/app.js"></script>

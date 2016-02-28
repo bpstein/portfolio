@@ -41,7 +41,7 @@ GRID
 .grid-sizer { width: 20%; }
 .item { width: 20%; }
 
-.image{
+.image {
   max-width: 100%;
   margin: 0;
   display: block;
@@ -49,6 +49,28 @@ GRID
 
 .image:after {
   clear:both;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/****************
+CORNER STAMP
+****************/
+
+.corner-stamp {
+  width: 60%;
+  height: 60%;
+}
+
+.stamp-background {
+  width: 100%;
+  height: 100%;
 }
 
 /****************
@@ -113,15 +135,26 @@ RESPONSIVE
   /* 10 columns for larger screens */
   .grid-sizer { width: 50%; }
   .item { width: 50%; }
+  #navbar, 
+  #navbar ul, 
+  #navbar ul li, 
+  #navbar ul li a {
+    font-size: 12px;
+    padding: 2px;
+    margin-top: -10px;
+  }
 }
 
 @media screen and (max-width: 520px) {
   /* 10 columns for larger screens */
   .grid-sizer { width: 100%; }
   .item { width: 100%; }
-  #navbar, #navbar ul, #navbar ul li, #navbar ul li a {
-  	font-size: 12px;
-  	padding: 3px;
+  #navbar, 
+  #navbar ul, 
+  #navbar ul li, 
+  #navbar ul li a {
+  	font-size: 10px;
+  	padding: 0 1px 0 1px;
   	margin-top: -10px;
   }
 }
@@ -140,7 +173,7 @@ NAVBAR
 	position: relative;
   top: 0;
   font-size: 24px;
-  background-color: #1E64CD;
+  background-color: #3E7CB1;
   color: #C4E0F9;
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
@@ -157,8 +190,8 @@ NAVBAR
 	display: inline;
 	text-align: center;
 	font-size: 16px;
-	background-color: #1E64CD;
-	color: #C4E0F9;
+	background-color: #3E7CB1;
+	color: #DBE4EE;
 	width: 100%;
   margin: auto;
   display: inline;
@@ -172,18 +205,17 @@ NAVBAR
 	text-align: center;
 	text-decoration: none;
 	padding: .2em 1em;
-	color: #C4E0F9;
-	background-color: #1E64CD;
+	background-color: #3E7CB1;
 	display: inline;
 }
 
 #navbar ul li a {
-	color: #9BBDF9;
+	color: #DBE4EE;
 }
 
 #navbar ul li a:hover {
 	text-decoration: none;
-	color: #373F51;
+	color: #81A4CD;
 }
 
 /****************
@@ -237,6 +269,10 @@ DIALOG MODAL
   background: rgba(0, 0, 0, 0.3) !important;
 }
 
+.close {
+	color: #888;
+}
+
 a.close {
   line-height: 1;
   font-size: 1.5em;
@@ -244,7 +280,7 @@ a.close {
   top: 5%;
   right: 2%;
   text-decoration: none;
-  color: #bbb;
+  color: #777;
 }
 
 a.close:hover {
