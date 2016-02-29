@@ -35,6 +35,7 @@ GRID
   float: left;
   position: relative;
   line-height: 1em;
+  list-style: none;
 }
 
 
