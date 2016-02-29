@@ -122,6 +122,17 @@ TEXT OVERLAY
   text-decoration: none;
 }
 
+.itemHover {
+  display: none;
+  position: absolute;
+  top: 0;
+  color: #FFF;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.70);
+  height: 100%;
+  z-index: 5;
+}
+
 /****************
 RESPONSIVE 
 ****************/

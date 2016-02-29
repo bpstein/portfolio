@@ -1,11 +1,9 @@
 $(window).load(function() {
-
   // MASONRY GRID FUNCTIONALITY // 
   $('#container').masonry({
       "itemSelector": ".item",
       "columnWidth": ".grid-sizer",
   });
-
 });
 
 $(document).ready(function() {
@@ -38,6 +36,18 @@ $(document).ready(function() {
 
   // UNCOMMENT THE BELOW FUNCTION CALL TO RUN JSON OBJECTS
   projects.display(); 
+
+  // ITEM JQUERY EFFECTS ON HOVER
+  $('.item').zoom({
+    duration: 400,
+    magnify: 0.4,
+    onZoomIn: function () {
+      $(this).parent().find('.itemHover').fadeIn(500);
+    },
+    onZoomOut: function () {
+      $(this).parent().find('.itemHover').fadeOut(400);
+    }
+  });   
 
   // NAVBAR FILTER 
   $('nav a').on('click', function() {
