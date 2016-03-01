@@ -62,7 +62,7 @@ $(document).ready(function() {
 
       else if ($(this).hasClass(filter)) {
         $(this).show().addClass('.show');
-        $("#container").masonry("reload");
+        $("#container").masonry(masonryUpdate);
       }
 
       else {
@@ -73,7 +73,16 @@ $(document).ready(function() {
 
     return false;
 
-  });
+    var masonryUpdate = function() {
+      setTimeout(function() {
+        $('#container').masonry();
+      }, 500);
+    }
+
+    $(document).on('click', masonryUpdate);
+    $(document).ajaxComplete(masonryUpdate);
+
+});
 
   // MODAL WINDOW FUNCTIONALITY //
   $('.item').on('click', function popup() {
