@@ -62,10 +62,12 @@ $(document).ready(function() {
 
       else if ($(this).hasClass(filter)) {
         $(this).show().addClass('.show');
+        $("#container").masonry("reload");
       }
 
       else {
         $(this).removeClass('.hide').addClass('.show');
+        $("#container").masonry("reload");
       }
     });
 
@@ -73,14 +75,14 @@ $(document).ready(function() {
 
   });
 
-  // Clear all filter classes when ALL button is clicked
-  $('.all').on('click', function() {
-    $('div').removeClass('.hide').addClass('.show');
-  });
-
   // MODAL WINDOW FUNCTIONALITY //
   $('.item').on('click', function popup() {
-    $('#popup').fadeIn(450);
+    for (project in projects.projects) {
+      var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
+      var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
+      $(".modal-body").append(formattedItemDetails);
+      $('#popup').fadeIn(450);
+    }
   });
 
   var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");

@@ -2,20 +2,23 @@ var projects = {
 	"projects": [{
 			"name": "Street Fighter",
 			"overview": "Street Fighter Ryu with basic jQuery effects",
+			"details": "This was an introductory exercise from Thinkful's front-end development course curriculum. We used basic JavaScript and jQuery to animate Ryu from Street Fighter.",
 			"image": "img/projects/streetfighter.jpg",
-      "workType": "front-end mobile",
+      "workType": "front-end mobile all",
 			"url": "http://www.bumstain.github.io/jquery-streetfighter"
 		}, {
 			"name": "Tic Tac Toe",
 			"overview": "JavaScript TicTacToe",
+			"details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est veniam dolore id natus rerum nemo suscipit, quos odit quidem quis aspernatur nostrum mollitia provident quam autem aliquam ad repellat et.",
 			"image": "img/projects/tictactoe.png",
-      "workType": "front-end mobile",
+      "workType": "front-end all",
 			"url": "http://www.bumstain.github.io/javascript-tictactoe"
 		}, {
 			"name": "SearchVidz YouTube API",
 			"overview": "Video search site using the YouTube API",
+			"details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus vel voluptate deserunt minima, nemo inventore itaque corporis, adipisci doloremque eveniet, facere reprehenderit quisquam iste nobis mollitia. Consectetur architecto doloribus dolorum.",
 			"image": "img/projects/youtube.jpg",
-      "workType": "front-end projects",
+      "workType": "front-end projects all",
 			"url": "http://www.bumstain.github.io/javascript-tictactoe"
 		}, {
 		// 	"name": "Special Kitten Project",
@@ -57,7 +60,7 @@ var projects = {
 			"name": "FAQ Slider",
 			"overview": "Accordion slider that uses jQuery, similar to FAQ menus",
 			"image": "img/projects/FAQslider.png",
-      "workType": "front-end",
+      "workType": "front-end all",
 			"url": "http://www.bumstain.github.io/FAQ-slider"
 		}
 	]
