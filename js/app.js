@@ -1,5 +1,5 @@
 $(window).load(function() {
-  // MASONRY GRID FUNCTIONALITY // 
+  // MASONRY GRID FUNCTIONALITY 
   $('#container').masonry({
       "itemSelector": ".item",
       "columnWidth": ".grid-sizer",
@@ -26,11 +26,13 @@ $(document).ready(function() {
       var formattedItemTitle = HTMLitemTitle.replace("%data%", projects.projects[project].name);
       var formattedItemOverview = HTMLitemOverview.replace("%data%", projects.projects[project].overview);
       $("#project-list").append(formattedItem); // Append project item to grid
-      $(".item").append(formattedItemImage); // Append image to item
-      $(".item").append(formattedItemAnchor); // Append overlay to image
+      $(".item:last")
+        .append(formattedItemImage) // Append image to item
+        .append(formattedItemDescription) // Append description to overlay
+        .append(formattedItemAnchor); // Append overlay to image
       $(".overlay").append(formattedItemDescription); // Append description overlay
       $(".title").append(formattedItemTitle); // Append title to description
-      $(".overview").append(formattedItemOverview); // Append overview to description
+      $(".overlay").append(formattedItemOverview); // Append overview to description
     }
   }
 
@@ -40,7 +42,7 @@ $(document).ready(function() {
   // ITEM JQUERY EFFECTS ON HOVER
   $('.item').zoom({
     duration: 400,
-    magnify: 0.4,
+    magnify: 0.6,
     onZoomIn: function () {
       $(this).parent().find('.itemHover').fadeIn(500);
     },
@@ -73,15 +75,15 @@ $(document).ready(function() {
 
     return false;
 
+    // Reshuffle the masonry grid after a selection on the navbar
     var masonryUpdate = function() {
       setTimeout(function() {
         $('#container').masonry();
       }, 500);
     }
 
-    $(document).on('click', masonryUpdate);
-    $(document).ajaxComplete(masonryUpdate);
-
+  $(document).on('click', masonryUpdate);
+  $(document).ajaxComplete(masonryUpdate);
 });
 
   // MODAL WINDOW FUNCTIONALITY //
