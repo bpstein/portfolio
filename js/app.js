@@ -41,7 +41,7 @@ $(document).ready(function() {
 
   // ITEM JQUERY EFFECTS ON HOVER
   $('.item').zoom({
-    duration: 400,
+    duration: 2300,
     magnify: 0.6,
     onZoomIn: function () {
       $(this).parent().find('.itemHover').fadeIn(500);
@@ -87,16 +87,13 @@ $(document).ready(function() {
 });
 
   // MODAL WINDOW FUNCTIONALITY //
-  $('.item').on('click', function popup() {
+  var runModal = function() {
+    var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");
     for (project in projects.projects) {
       var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
       var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
-      $(".modal-body").append(formattedItemDetails);
-      $('#popup').fadeIn(450);
+      $(".modal-body").html(formattedItemDetails);
     }
-  });
-
-  var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");
 
     $('a[data-modal-id]').click(function(e) {
       e.preventDefault();
@@ -106,19 +103,33 @@ $(document).ready(function() {
       $('#'+modalBox).fadeIn($(this).data());
     });  
     
-  $(".js-modal-close, .modal-overlay").click(function() {
-    $(".modal-box, .modal-overlay").fadeOut(500, function() {
-      $(".modal-overlay").remove();
+    $(".js-modal-close, .modal-overlay").click(function() {
+      $(".modal-box, .modal-overlay").fadeOut(500, function() {
+        $(".modal-overlay").remove();
+      });
     });
-  });
-   
-  $(window).resize(function() {
-    $(".modal-box").css({
-      top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
-      left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+     
+    $(window).resize(function() {
+      $(".modal-box").css({
+        top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+        left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+      });
     });
-  });
-   
-  $(window).resize();
+     
+    $(window).resize();
+  }
+
+  $('.item').on('click', function() {
+    $('#popup').fadeIn(450);
+    runModal();
+  })
+  // $('.item').on('click', function popup() {
+  //   for (project in projects.projects) {
+  //     var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
+  //     var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
+  //     $(".modal-body").append(formattedItemDetails);
+  //     
+  //   }
+  // });
 
 });

@@ -91,6 +91,7 @@ TEXT OVERLAY
   text-decoration: none;
   color: #fff;
   display: none;
+  z-index: 5;
 }
 
 .overlay .description {
