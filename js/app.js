@@ -12,7 +12,7 @@ $(document).ready(function() {
   var HTMLitem = '<li class="item '+'%data%"></li>';
   var HTMLitemImage = '<img src="%data%" class="image">';
   var HTMLitemAnchor = '<a class="overlay" href="#" target="_blank"</a>';
-  var HTMLitemDescription = '<div class="description"></div>';
+  var HTMLitemDescription = '<p class="description"></p>';
   var HTMLitemTitle = '<h3 class="title">%data%</h3>';
   var HTMLitemOverview = '<div class="overview"><p>%data%</p></div>';
 
@@ -26,13 +26,12 @@ $(document).ready(function() {
       var formattedItemTitle = HTMLitemTitle.replace("%data%", projects.projects[project].name);
       var formattedItemOverview = HTMLitemOverview.replace("%data%", projects.projects[project].overview);
       $("#project-list").append(formattedItem); // Append project item to grid
-      $(".item:last")
-        .append(formattedItemImage) // Append image to item
-        .append(formattedItemDescription) // Append description to overlay
+      $(".item:last").append(formattedItemImage); // Append image to item
+      $(".item:last").append(formattedItemDescription) // Append description to overlay
         .append(formattedItemAnchor); // Append overlay to image
       $(".overlay").append(formattedItemDescription); // Append description overlay
-      $(".title").append(formattedItemTitle); // Append title to description
-      $(".overlay").append(formattedItemOverview); // Append overview to description
+      $(".description:last").append(formattedItemTitle); // Append title to description
+      $(".description:last").append(formattedItemOverview); // Append overview to description
     }
   }
 
