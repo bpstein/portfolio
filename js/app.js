@@ -11,7 +11,7 @@ $(document).ready(function() {
   // DECLARE HTML ELEMENTS FOR PROJECT GRID
   var HTMLitem = '<li class="item '+'%data%"></li>';
   var HTMLitemImage = '<img src="%data%" class="image">';
-  var HTMLitemAnchor = '<a class="overlay" href="#" target="_blank"</a>';
+  var HTMLitemAnchor = '<a class="overlay" href="#"</a>';
   var HTMLitemDescription = '<p class="description"></p>';
   var HTMLitemTitle = '<h3 class="title">%data%</h3>';
   var HTMLitemOverview = '<div class="overview"><p>%data%</p></div>';
@@ -39,16 +39,16 @@ $(document).ready(function() {
   projects.display(); 
 
   // ITEM JQUERY EFFECTS ON HOVER
-  $('.item').zoom({
-    duration: 2300,
-    magnify: 0.6,
-    onZoomIn: function () {
-      $(this).parent().find('.itemHover').fadeIn(500);
-    },
-    onZoomOut: function () {
-      $(this).parent().find('.itemHover').fadeOut(400);
-    }
-  });   
+  // $('.item').zoom({
+  //   duration: 2300,
+  //   magnify: 0.6,
+  //   onZoomIn: function () {
+  //     $(this).parent().find('.itemHover').fadeIn(500);
+  //   },
+  //   onZoomOut: function () {
+  //     $(this).parent().find('.itemHover').fadeOut(400);
+  //   }
+  // });   
 
   // NAVBAR FILTER 
   $('nav a').on('click', function() {
@@ -90,8 +90,11 @@ $(document).ready(function() {
     var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");
     for (project in projects.projects) {
       var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
+      var HTMLitemModalTitle = '<h3>%data%</h3>';
       var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
-      $(".modal-body").html(formattedItemDetails);
+      var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[project].title);
+      $(".modal-body").append(formattedItemDetails);
+      // $(".js-modal-close").append(formattedModalTitle);
     }
 
     $('a[data-modal-id]').click(function(e) {
@@ -122,13 +125,5 @@ $(document).ready(function() {
     $('#popup').fadeIn(450);
     runModal();
   })
-  // $('.item').on('click', function popup() {
-  //   for (project in projects.projects) {
-  //     var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
-  //     var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
-  //     $(".modal-body").append(formattedItemDetails);
-  //     
-  //   }
-  // });
 
 });
