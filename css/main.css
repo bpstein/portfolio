@@ -28,7 +28,9 @@ h1 {
 }
 
 .hero-image {
-  background-image: 'img/main.jpg';
+  height: 10%; width: 100%;
+  display: block;
+  top: 0;
 }
 
 /****************
@@ -186,10 +188,10 @@ NAVBAR
 #navbar {
 	height: 50px;
 	padding: 12.5px;
-	position: relative;
+	position: absolute;
   top: 0;
   font-size: 24px;
-  background-color: #3E7CB1;
+  background-color: transparent;
   color: #C4E0F9;
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
