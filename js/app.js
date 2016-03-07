@@ -39,16 +39,16 @@ $(document).ready(function() {
   projects.display(); 
 
   // ITEM JQUERY EFFECTS ON HOVER
-  // $('.item').zoom({
-  //   duration: 2300,
-  //   magnify: 0.6,
-  //   onZoomIn: function () {
-  //     $(this).parent().find('.itemHover').fadeIn(500);
-  //   },
-  //   onZoomOut: function () {
-  //     $(this).parent().find('.itemHover').fadeOut(400);
-  //   }
-  // });   
+  $('.item').zoom({
+    duration: 250,
+    magnify: 0.6,
+    onZoomIn: function () {
+      $(this).parent().find('.itemHover').fadeIn(500);
+    },
+    onZoomOut: function () {
+      $(this).parent().find('.itemHover').fadeOut(400);
+    }
+  });   
 
   // NAVBAR FILTER 
   $('nav a').on('click', function() {

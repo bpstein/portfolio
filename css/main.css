@@ -17,10 +17,19 @@ body {
     background-color: #EEE;
 }
 
+h1, h2 {
+  right: 20px;
+  color: #DE291C;
+  position: absolute;
+}
+
 h1 {
-	font-size: 24px;
-	font-weight: normal;
-	float: left;
+	font-size: 38px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 70px;
 }
 
 #container {
@@ -28,10 +37,10 @@ h1 {
 }
 
 .hero-image {
-  height: 10%; width: 100%;
-  display: block;
+  height: auto; width: 100%;
   top: 0;
-}
+/*  background-image: url('../images/main.jpg');
+*/}
 
 /****************
 GRID
@@ -159,7 +168,7 @@ RESPONSIVE
   #navbar ul li a {
     font-size: 12px;
     padding: 2px;
-    margin-top: -10px;
+    margin-top: -2px;
   }
 }
 
@@ -173,7 +182,7 @@ RESPONSIVE
   #navbar ul li a {
   	font-size: 10px;
   	padding: 0 1px 0 1px;
-  	margin-top: -10px;
+  	margin-top: -2px;
   }
 }
 
@@ -190,6 +199,7 @@ NAVBAR
 	padding: 12.5px;
 	position: absolute;
   top: 0;
+  right: 50px;
   font-size: 24px;
   background-color: transparent;
   color: #C4E0F9;
@@ -208,12 +218,11 @@ NAVBAR
 	display: inline;
 	text-align: center;
 	font-size: 16px;
-	background-color: #3E7CB1;
-	color: #DBE4EE;
+	color: #3E7CB1;
 	width: 100%;
   margin: auto;
   display: inline;
-  float: left;
+  float: right;
 }
 
 #navbar ul li {
@@ -222,12 +231,12 @@ NAVBAR
 	position: relative;
 	text-align: center;
 	text-decoration: none;
-	background-color: #3E7CB1;
 	display: inline;
+  float: right;
 }
 
 #navbar ul li a {
-	color: #DBE4EE;
+	color: #3E7CB1;
 }
 
 #navbar ul li a:hover {

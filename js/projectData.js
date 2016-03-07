@@ -2,7 +2,7 @@ var projects = {
 	"projects": [{
 			"name": "Street Fighter",
 			"overview": "Street Fighter Ryu with basic jQuery effects",
-			"details": "This was an introductory exercise from Thinkful's front-end development course curriculum. We used basic JavaScript and jQuery to animate Ryu from Street Fighter.",
+			"details": ["This was an introductory exercise from Thinkful's front-end development course curriculum. We used basic JavaScript and jQuery to animate Ryu from Street Fighter."],
 			"image": ["img/projects/streetfighter.jpg"],
       "workType": "front-end mobile all",
 			"url": "http://www.bumstain.github.io/jquery-streetfighter"
