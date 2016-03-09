@@ -9,6 +9,7 @@ GENERAL STYLING
 html {
     overflow-y: scroll;
     font-style: 'Noto Sans', 'Arial', sans-serif;
+    height: 100%;
 }
 
 body {
@@ -18,19 +19,35 @@ body {
 }
 
 h1, h2 {
-  right: 20px;
+  right: 0;
+  left: 0;
+  text-align: center;
   color: #DE291C;
   position: absolute;
-}
-
-h1 {
-	font-size: 38px;
+  text-transform: uppercase;
+  font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
 }
 
 h2 {
-  font-size: 26px;
-  margin-top: 70px;
+  font-size: 32px;
+  margin-top: 145px;
 }
+
+.initial {
+  font-size: 48px;
+  margin-top: 90px;
+}
+
+.sticky {
+  top: -5px;
+  font-size: 24px;
+  color: #DE291C;
+  text-transform: uppercase;
+  font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
+  position: fixed;
+  z-index: 50;
+}
+
 
 #container {
 	background-color: #EEE;
@@ -39,8 +56,8 @@ h2 {
 .hero-image {
   height: auto; width: 100%;
   top: 0;
-/*  background-image: url('../images/main.jpg');
-*/}
+  height: 100vh;
+}
 
 /****************
 GRID
@@ -149,55 +166,18 @@ TEXT OVERLAY
 }
 
 /****************
-RESPONSIVE 
-****************/
-
-@media screen and (max-width: 1224px) {
-  /* 10 columns for larger screens */
-  .grid-sizer { width: 33.33%; }
-  .item { width: 33.33%; }
-}
-
-@media screen and (max-width: 720px) {
-  /* 10 columns for larger screens */
-  .grid-sizer { width: 50%; }
-  .item { width: 50%; }
-  #navbar, 
-  #navbar ul, 
-  #navbar ul li, 
-  #navbar ul li a {
-    font-size: 12px;
-    padding: 2px;
-    margin-top: -2px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  /* 10 columns for larger screens */
-  .grid-sizer { width: 100%; }
-  .item { width: 100%; }
-  #navbar, 
-  #navbar ul, 
-  #navbar ul li, 
-  #navbar ul li a {
-  	font-size: 10px;
-  	padding: 0 1px 0 1px;
-  	margin-top: -2px;
-  }
-}
-
-@media (min-width: 32em) {
-  .modal-box { width: 70%; }
-}
-
-/****************
 NAVBAR
 ****************/
+
+.row .topbar {
+  background-color: #FFF;
+  width: 100%;
+}
 
 #navbar {
 	height: 50px;
 	padding: 12.5px;
-	position: absolute;
+	position: fixed;
   top: 0;
   right: 50px;
   font-size: 24px;
@@ -206,6 +186,7 @@ NAVBAR
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
   font-size: bolder;
+  z-index: 5000;
 }
 
 .table {
@@ -222,7 +203,7 @@ NAVBAR
 	width: 100%;
   margin: auto;
   display: inline;
-  float: right;
+  float: left;
 }
 
 #navbar ul li {
@@ -314,4 +295,46 @@ a.close:hover {
   -moz-transition: color 1s ease;
   transition: color 1s ease;
   text-decoration: none;
+}
+
+/****************
+RESPONSIVE 
+****************/
+
+@media screen and (max-width: 1224px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 33.33%; }
+  .item { width: 33.33%; }
+}
+
+@media screen and (max-width: 720px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 50%; }
+  .item { width: 50%; }
+  #navbar, 
+  #navbar ul, 
+  #navbar ul li, 
+  #navbar ul li a {
+    font-size: 12px;
+    padding: 2px;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 100%; }
+  .item { width: 100%; }
+  #navbar, 
+  #navbar ul, 
+  #navbar ul li, 
+  #navbar ul li a {
+    font-size: 10px;
+    padding: 0 1px 0 1px;
+    margin-top: -2px;
+  }
+}
+
+@media (min-width: 32em) {
+  .modal-box { width: 70%; }
 }

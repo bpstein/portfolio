@@ -35,7 +35,6 @@ $(document).ready(function() {
     }
   }
 
-  // UNCOMMENT THE BELOW FUNCTION CALL TO RUN JSON OBJECTS
   projects.display(); 
 
   // ITEM JQUERY EFFECTS ON HOVER
@@ -49,6 +48,22 @@ $(document).ready(function() {
       $(this).parent().find('.itemHover').fadeOut(400);
     }
   });   
+
+  // STICKY NAME  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 85) {
+      $('h1').addClass('sticky').removeClass('initial');
+      $('h2').fadeOut(500);
+    }
+    else {
+      $('h1').addClass('initial').removeClass('sticky');
+      $('h2').fadeIn(800);
+    }
+  });
 
   // NAVBAR FILTER 
   $('nav a').on('click', function() {
