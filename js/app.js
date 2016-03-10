@@ -50,18 +50,29 @@ $(document).ready(function() {
   });   
 
   // STICKY NAME  
-  $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
-      console.log($(window).scrollTop())
-    if ($(window).scrollTop() > 85) {
+  $(window).scroll(function() {
+    console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 205) {
       $('h1').addClass('sticky').removeClass('initial');
-      $('h2').fadeOut(500);
     }
     else {
       $('h1').addClass('initial').removeClass('sticky');
+    }
+    if ($(window).scrollTop() > 190) {
+      $('h2').fadeOut(500);
+    }
+    else {
       $('h2').fadeIn(800);
+    }
+  });
+
+  // STICKY NAVBAR (WHITE)
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 45) {
+      $('#navbar').addClass('sticky-header').removeClass('initial-header');
+    } 
+    else {
+      $('#navbar').addClass('initial-header').removeClass('sticky-header');
     }
   });
 
@@ -100,45 +111,52 @@ $(document).ready(function() {
   $(document).ajaxComplete(masonryUpdate);
 });
 
+
+
+
+
+
+
+
   // MODAL WINDOW FUNCTIONALITY //
-  var runModal = function() {
-    var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");
-    for (project in projects.projects) {
-      var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
-      var HTMLitemModalTitle = '<h3>%data%</h3>';
-      var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
-      var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[project].title);
-      $(".modal-body").append(formattedItemDetails);
-      // $(".js-modal-close").append(formattedModalTitle);
-    }
+  // var runModal = function() {
+  //   var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");
+  //   for (project in projects.projects) {
+  //     var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
+  //     var HTMLitemModalTitle = '<h3>%data%</h3>';
+  //     var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
+  //     var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[project].title);
+  //     $(".modal-body").append(formattedItemDetails);
+  //     // $(".js-modal-close").append(formattedModalTitle);
+  //   }
 
-    $('a[data-modal-id]').click(function(e) {
-      e.preventDefault();
-      $("body").append(appendModal);
-      $(".modal-overlay").fadeTo(500, 0.7);
-      var modalBox = $(this).attr('data-modal-id');
-      $('#'+modalBox).fadeIn($(this).data());
-    });  
+  //   $('a[data-modal-id]').click(function(e) {
+  //     e.preventDefault();
+  //     $("body").append(appendModal);
+  //     $(".modal-overlay").fadeTo(500, 0.7);
+  //     var modalBox = $(this).attr('data-modal-id');
+  //     $('#'+modalBox).fadeIn($(this).data());
+  //   });  
     
-    $(".js-modal-close, .modal-overlay").click(function() {
-      $(".modal-box, .modal-overlay").fadeOut(500, function() {
-        $(".modal-overlay").remove();
-      });
-    });
+  //   $(".js-modal-close, .modal-overlay").click(function() {
+  //     $(".modal-box, .modal-overlay").fadeOut(500, function() {
+  //       $(".modal-overlay").remove();
+  //     });
+  //   });
      
-    $(window).resize(function() {
-      $(".modal-box").css({
-        top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
-        left: ($(window).width() - $(".modal-box").outerWidth()) / 2
-      });
-    });
+  //   $(window).resize(function() {
+  //     $(".modal-box").css({
+  //       top: ($(window).height() - $(".modal-box").outerHeight()) / 2,
+  //       left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+  //     });
+  //   });
      
-    $(window).resize();
-  }
+  //   $(window).resize();
+  // }
 
-  $('.item').on('click', function() {
-    $('#popup').fadeIn(450);
-    runModal();
-  })
+  // $('.item').on('click', function() {
+  //   $('#popup').fadeIn(450);
+  //   runModal();
+  // })
 
 });

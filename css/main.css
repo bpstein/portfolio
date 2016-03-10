@@ -30,12 +30,14 @@ h1, h2 {
 
 h2 {
   font-size: 32px;
-  margin-top: 145px;
+  margin-top: 245px;
 }
 
 .initial {
+  top: 0; bottom: 0;
+  vertical-align: middle;
   font-size: 48px;
-  margin-top: 90px;
+  margin-top: 190px;
 }
 
 .sticky {
@@ -45,7 +47,7 @@ h2 {
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
   position: fixed;
-  z-index: 50;
+  z-index: 101;
 }
 
 
@@ -179,14 +181,21 @@ NAVBAR
 	padding: 12.5px;
 	position: fixed;
   top: 0;
-  right: 50px;
+  right: 0px;
   font-size: 24px;
-  background-color: transparent;
   color: #C4E0F9;
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
   font-size: bolder;
-  z-index: 5000;
+  z-index: 100;
+}
+
+.initial-header {
+  background-color: transparent;
+}
+
+.sticky-header {
+  background-color: #FFF;
 }
 
 .table {
@@ -209,7 +218,6 @@ NAVBAR
 #navbar ul li {
   list-style-type: none;	
 	padding-left: 10px; padding-right: 10px;
-	position: relative;
 	text-align: center;
 	text-decoration: none;
 	display: inline;
@@ -218,11 +226,23 @@ NAVBAR
 
 #navbar ul li a {
 	color: #3E7CB1;
+  z-index: 102;
 }
 
-#navbar ul li a:hover {
+#navbar ul li a:hover, .hamburger:hover {
 	text-decoration: none;
 	color: #81A4CD;
+  z-index: 102;
+}
+
+.hamburger {
+  text-align: right;
+  margin-left: 50px;
+  float: left;
+  text-decoration: none;
+  display: inline;
+  position: fixed;
+  top: 5px;
 }
 
 /****************
