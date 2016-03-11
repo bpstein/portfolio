@@ -40,16 +40,19 @@ h2 {
   margin-top: 190px;
 }
 
-.sticky {
-  top: -5px;
+#top-header {
+  text-align: left;
+  top: -13px; 
+  margin-left: 45%; margin-right: 0;
   font-size: 24px;
   color: #DE291C;
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
   position: fixed;
-  z-index: 101;
+  display: none;
+  z-index: 99;
+  max-width: 100px;
 }
-
 
 #container {
 	background-color: #EEE;
@@ -187,7 +190,7 @@ NAVBAR
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
   font-size: bolder;
-  z-index: 100;
+  z-index: 102;
 }
 
 .initial-header {
@@ -211,7 +214,6 @@ NAVBAR
 	color: #3E7CB1;
 	width: 100%;
   margin: auto;
-  display: inline;
   float: left;
 }
 
@@ -222,6 +224,7 @@ NAVBAR
 	text-decoration: none;
 	display: inline;
   float: right;
+  z-index: 105;
 }
 
 #navbar ul li a {
@@ -229,7 +232,9 @@ NAVBAR
   z-index: 102;
 }
 
-#navbar ul li a:hover, .hamburger:hover {
+#navbar ul li a:hover, 
+#navbar ul li:hover,
+.hamburger:hover {
 	text-decoration: none;
 	color: #81A4CD;
   z-index: 102;
@@ -237,7 +242,7 @@ NAVBAR
 
 .hamburger {
   text-align: right;
-  margin-left: 50px;
+  margin-left: 10px;
   float: left;
   text-decoration: none;
   display: inline;
@@ -296,7 +301,7 @@ DIALOG MODAL
 }
 
 .close {
-	color: #888;
+  color: #888;
 }
 
 a.close {
