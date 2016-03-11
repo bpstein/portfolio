@@ -179,6 +179,14 @@ NAVBAR
   width: 100%;
 }
 
+.white {
+  color: #FFF;
+}
+
+.blue {
+  color: #3E7CB1;
+}
+
 #navbar {
 	height: 50px;
 	padding: 12.5px;
@@ -186,7 +194,7 @@ NAVBAR
   top: 0;
   right: 0px;
   font-size: 24px;
-  color: #C4E0F9;
+  color: #FFF;
   text-transform: uppercase;
   font-family: 'Oswald', 'Noto Sans', 'Helvetica', sans-serif;
   font-size: bolder;
@@ -201,6 +209,16 @@ NAVBAR
   background-color: #FFF;
 }
 
+.fa {
+  position: absolute;
+}
+
+#facebook {margin-left: 60px;}
+#instagram {margin-left: 100px;}
+#twitter {margin-left: 140px;}
+#github {margin-left: 180px;}
+
+
 .table {
 	display: table;   
 	margin: 0 auto;
@@ -211,7 +229,6 @@ NAVBAR
 	display: inline;
 	text-align: center;
 	font-size: 16px;
-	color: #3E7CB1;
 	width: 100%;
   margin: auto;
   float: left;
@@ -228,13 +245,13 @@ NAVBAR
 }
 
 #navbar ul li a {
-	color: #3E7CB1;
   z-index: 102;
 }
 
 #navbar ul li a:hover, 
 #navbar ul li:hover,
-.hamburger:hover {
+.hamburger:hover,
+.fa:hover {
 	text-decoration: none;
 	color: #81A4CD;
   z-index: 102;

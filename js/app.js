@@ -72,9 +72,15 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if ($(window).scrollTop() > 45) {
       $('#navbar').fadeIn(500).addClass('sticky-header', 500).removeClass('initial-header');
+      $('.fa').removeClass('white').addClass('blue');
+      $('.hamburger').removeClass('white').addClass('blue');
+      $('nav li a').removeClass('white').addClass('blue');
     } 
     else {
       $('#navbar').addClass('initial-header').removeClass('sticky-header');
+      $('.fa').removeClass('blue').addClass('white');
+      $('.hamburger').removeClass('blue').addClass('white');
+      $('nav li a').removeClass('blue').addClass('white');
     }
   });
 
@@ -128,7 +134,7 @@ $(document).ready(function() {
 
     $('a[data-modal-id]').click(function(e) {
       e.preventDefault();
-      $("body").append(appendModal);
+      $(".item").show(appendModal);
       $(".modal-overlay").fadeTo(500, 0.7);
       var modalBox = $(this).attr('data-modal-id');
       $('#'+modalBox).fadeIn($(this).data());
