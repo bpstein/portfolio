@@ -38,16 +38,16 @@ $(document).ready(function() {
   projects.display(); 
 
   // ITEM JQUERY EFFECTS ON HOVER
-  // $('.item').zoom({
-  //   duration: 250,
-  //   magnify: 0.6,
-  //   onZoomIn: function () {
-  //     $(this).parent().find('.itemHover').fadeIn(500);
-  //   },
-  //   onZoomOut: function () {
-  //     $(this).parent().find('.itemHover').fadeOut(400);
-  //   }
-  // });   
+  $('.item').zoom({
+    duration: 250,
+    magnify: 0.6,
+    onZoomIn: function () {
+      $(this).parent().find('.itemHover').fadeIn(500);
+    },
+    onZoomOut: function () {
+      $(this).parent().find('.itemHover').fadeOut(400);
+    }
+  });   
 
   // STICKY NAME  
   $(window).scroll(function() {
@@ -115,10 +115,22 @@ $(document).ready(function() {
       }, 500);
     }
 
+    var moveToAnchor = function() {
+      var scrollAnchor = document.getElementById('project-list');
+      scrollAnchor.scrollIntoView();
+      console.log("this works!");
+    }  
+
+  moveToAnchor();  
   $(document).on('click', masonryUpdate);
   $(document).ajaxComplete(masonryUpdate);
 });
 
+// SCROLL TO GRID ON NAVBAR CLICK
+$('.topbar').on('click', function(){
+  console.log("this works");
+
+});
 
 // MODAL WINDOW FUNCTIONALITY //
   var runModal = function() {

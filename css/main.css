@@ -33,6 +33,11 @@ h2 {
   margin-top: 245px;
 }
 
+p, 
+pre {
+  margin: 0;
+}
+
 .initial {
   top: 0; bottom: 0;
   vertical-align: middle;
