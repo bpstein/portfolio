@@ -115,15 +115,25 @@ $(document).ready(function() {
       }, 500);
     }
 
-    var moveToAnchor = function() {
-      var scrollAnchor = document.getElementById('project-list');
-      scrollAnchor.scrollIntoView();
-      console.log("this works!");
-    }  
+  //   var moveToAnchor = function() {
+  //     var scrollAnchor = document.getElementById('project-list');
+  //     scrollAnchor.scrollIntoView();
+  //     console.log("this works!");
+  //   }  
 
-  moveToAnchor();  
-  $(document).on('click', masonryUpdate);
-  $(document).ajaxComplete(masonryUpdate);
+  // moveToAnchor();  
+  // $(document).on('click', masonryUpdate);
+  // $(document).ajaxComplete(masonryUpdate);
+});
+
+// SCROLL DOWN SCREEN TO PROJECTS WHEN USER CLICKS ON NAV BAR
+$('nav li').click(function () {
+  var offset = $(this).offset(); // Contains .top and .left
+  offset.top += 580;
+  $('html, body').animate({
+    scrollTop: offset.top,
+    scrollLeft: offset.left
+  }, 1100);
 });
 
 // SCROLL TO GRID ON NAVBAR CLICK
