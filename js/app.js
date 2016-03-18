@@ -40,7 +40,7 @@ $(document).ready(function() {
   // ITEM JQUERY EFFECTS ON HOVER
   $('.item').zoom({
     duration: 250,
-    magnify: 0.6,
+    magnify: .7,
     onZoomIn: function () {
       $(this).parent().find('.itemHover').fadeIn(500);
     },
@@ -114,44 +114,32 @@ $(document).ready(function() {
         $('#container').masonry();
       }, 500);
     }
-
-  //   var moveToAnchor = function() {
-  //     var scrollAnchor = document.getElementById('project-list');
-  //     scrollAnchor.scrollIntoView();
-  //     console.log("this works!");
-  //   }  
-
-  // moveToAnchor();  
-  // $(document).on('click', masonryUpdate);
-  // $(document).ajaxComplete(masonryUpdate);
 });
 
-// SCROLL DOWN SCREEN TO PROJECTS WHEN USER CLICKS ON NAV BAR
+// SCROLL DOWN TO GRID WHEN USER CLICKS ON NAV BAR
 $('nav li').click(function () {
   var offset = $(this).offset(); // Contains .top and .left
-  offset.top += 580;
-  $('html, body').animate({
-    scrollTop: offset.top,
-    scrollLeft: offset.left
-  }, 1100);
-});
-
-// SCROLL TO GRID ON NAVBAR CLICK
-$('.topbar').on('click', function(){
-  console.log("this works");
+  if ($(window).scrollTop() < 490) {
+    offset.top += 580;
+    $('html, body').animate({
+      scrollTop: offset.top,
+      scrollLeft: offset.left
+    }, 1100);
+  }
 
 });
 
 // MODAL WINDOW FUNCTIONALITY //
   var runModal = function() {
     var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");
-    for (project in projects.projects) {
+
+    for(var i = 0; i < projects.projects.length; i++) {
       var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
       var HTMLitemModalTitle = '<h3>%data%</h3>';
       var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
-      var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[project].title);
-      $(".modal-body").append(formattedItemDetails);
-      // $(".js-modal-close").append(formattedModalTitle);
+      var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[project].name);
+      $(".modal-body:last").append(formattedItemDetails);
+      $("header").append(formattedModalTitle);
     }
 
     $('a[data-modal-id]').click(function(e) {
