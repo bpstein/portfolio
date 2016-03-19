@@ -49,9 +49,9 @@ $(document).ready(function() {
     }
   });   
 
-  // STICKY NAME  
+  // STICKY H1 NAME  
   $(window).scroll(function() {
-    console.log($(window).scrollTop())
+    // console.log($(window).scrollTop())
     if ($(window).scrollTop() > 190) {
       $('.h1').removeClass('initial');
       $('#top-header').fadeIn(500);
@@ -88,7 +88,6 @@ $(document).ready(function() {
   $('nav li').on('click', function() {
 
     var filter = $(this).text().toLowerCase().replace(' ', '-');
-    console.log(filter);
 
     $('#container .item').each(function() {
       if (!$(this).hasClass(filter)) {
@@ -129,18 +128,15 @@ $('nav li').click(function () {
 
 });
 
-// MODAL WINDOW FUNCTIONALITY //
+// MODAL WINDOW FUNCTIONALITY 
   var runModal = function() {
     var appendModal =  ("<div class='modal-overlay js-modal-close'></div>");
-
-    for(var i = 0; i < projects.projects.length; i++) {
-      var HTMLitemDetails = '<p class="popup-detail">%data%</p>';
-      var HTMLitemModalTitle = '<h3>%data%</h3>';
-      var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[project].details);
-      var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[project].name);
-      $(".modal-body:last").append(formattedItemDetails);
-      $("header").append(formattedModalTitle);
-    }
+    var HTMLitemDetails = '<p class="popup-detail">' + projects.projects[4].details + '</p>';
+    var HTMLitemModalTitle = '<h3>%data%</h3>';
+    var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[4].details);
+    var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[4].name);
+    $(".modal-body").empty(formattedItemDetails).append(formattedItemDetails);
+    $("header").empty(formattedModalTitle).append(formattedModalTitle);
 
     $('a[data-modal-id]').click(function(e) {
       e.preventDefault();
@@ -169,6 +165,15 @@ $('nav li').click(function () {
   $('.item').on('click', function() {
     $('#popup').fadeIn(450);
     runModal();
-  })
+  });
+
+  var getItem = function() {
+    $('.item').click(function() {
+      var itemIndex = $(this).index();
+      console.log(itemIndex);
+    });
+  }
+
+  getItem();
 
 });
