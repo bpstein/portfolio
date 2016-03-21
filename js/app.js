@@ -129,20 +129,22 @@ $('nav li').click(function () {
 });
 
 // MODAL WINDOW FUNCTIONALITY 
+// *** NOTE ***
+// *** NOTE ***
 // *** NOTE *** replace fixed array index number with actual item number on click ***
   var runModal = function() {
+    // Append HTML elements to the modal box
     var appendModal =  ('<div class="modal-overlay js-modal-close"></div>');
     var HTMLitemModalTitle = '<h3>%data%</h3>';
-    var HTMLitemDetails = '<p class="popup-detail">' + projects.projects[4].details + '</p>';
-    var HTMLitemUrl = '<a class="popup-detail" href="%data%" target="blank_">%text%</a>';
-    var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[4].name);
-    var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[4].details);
-    var formattedItemUrl = HTMLitemUrl.replace("%data%", projects.projects[4].url);
-    // var formattedItemLink = HTMLitemUrl.replace("%text%", projects.projects[4].url);
+    var HTMLitemDetails = '<p class="popup-detail">' + projects.projects[2].details + '</p>';
+    var HTMLitemUrl =' <a target="_blank" href="' + projects.projects[2].url + '">See the project</a>';
+    var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[2].name);
+    var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[2].details);
     $('header').empty(formattedModalTitle).append(formattedModalTitle);
     $('.modal-body').empty(formattedItemDetails).append(formattedItemDetails);
-    $('.modal-body').empty(formattedItemUrl).append(formattedItemUrl);
+    $('.modal-body').append(HTMLitemUrl);
 
+    // Fire the modal on a click event
     $('a[data-modal-id]').click(function(e) {
       e.preventDefault();
       $(".item").show(appendModal);

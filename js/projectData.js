@@ -32,7 +32,7 @@ var projects = {
     	"workType": "front-end projects mobile all",
 			"url": "#"
 		}, {
-			"id": 5,
+			"id": 4,
 			"name": "Marvel Quiz",
 			"overview": "Basic JavaScript quiz app based on weird facts from the Marvel universe",
 			"details": "A quiz built as an introductory exercise in JavaScript. The quiz uses simple JavaScript and jQuery to guide the user through a multiple choice quiz.",
@@ -40,7 +40,7 @@ var projects = {
     	"workType": "front-end projects all",
 			"url": "http://www.bpstein.github.io/marvel-quiz"
 		}, {
-			"id": 6,
+			"id": 5,
 			"name": "Stack Overflow Reputation Builder",
 			"overview": "Stack Overflow reputation builder using AJAX",
 			"details": "An app that was built as an introduction to JSON and APIs. The app uses the Stack Overflow API to find the top responses on specific topics, as well as the top contributors on given topics.",
@@ -48,7 +48,7 @@ var projects = {
     	"workType": "front-end projects all",
 			"url": "http://www.bpstein.github.io/ajax-stackoverflow"
 		}, {
-			"id": 7,
+			"id": 6,
 			"name": "Content Slider",
 			"overview": "Simple jQuery content slider",
 			"details": "This is a simple jQuery content slider that could be used for displaying various content in a sliding panel.",
@@ -56,7 +56,7 @@ var projects = {
     "workType": "front-end mobile all",
 			"url": "http://www.bpstein.github.io/content-slider"
 		}, {
-			"id": 8,
+			"id": 7,
 			"name": "Hot or Cold App",
 			"overview": "Guess the secret number in this hot or cold guessing game",
 			"details": "A very basic number guessing game. The app chooses a number at random, requests a numerical guess from the user, then tells the user whether their guess is hot or cold.",
@@ -64,7 +64,7 @@ var projects = {
     	"workType": "front-end projects all",
 			"url": "#"
 		}, {
-			"id": 9,
+			"id": 8,
 			"name": "FAQ Slider",
 			"overview": "Accordion slider that uses jQuery, similar to FAQ menus",
 			"details": "Content slider that expands and collapses conent on request, similar to typical FAQ menus.",
@@ -72,7 +72,7 @@ var projects = {
       "workType": "front-end all",
 			"url": "http://www.bpstein.github.io/FAQ-slider"
 		}, {
-			"id": 10,
+			"id": 9,
 			"name": "One Month Stripe",
 			"overview": "Basic e-commerce store built using Ruby on Rails and Stripe for payments processing",
 			"details": "This is a basic e-commerce store built using Ruby on Rails and Stripe for payments processing. The site was built as the focus of the One Month Stripe Payments course offered by OneMonth.com.",
@@ -80,7 +80,7 @@ var projects = {
 			"workType": "front-end back-end full-stack all",
 			"url": "http://bs-oms.herokuapp.com"
 		}, {
-			"id": 11, 
+			"id": 10, 
 			"name": "Vox Blog Clone",
 			"overview": "Clone of a responsive blog site",
 			"details": "A clone of a responsive blog news site, demonstrating responsive styling principles.",
