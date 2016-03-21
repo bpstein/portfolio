@@ -134,11 +134,11 @@ $('nav li').click(function () {
     var appendModal =  ('<div class="modal-overlay js-modal-close"></div>');
     var HTMLitemModalTitle = '<h3>%data%</h3>';
     var HTMLitemDetails = '<p class="popup-detail">' + projects.projects[4].details + '</p>';
-    var HTMLitemUrl = '<a href="%data%" target="blank_">%text%</a>';
+    var HTMLitemUrl = '<a class="popup-detail" href="%data%" target="blank_">%text%</a>';
     var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[4].name);
     var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[4].details);
     var formattedItemUrl = HTMLitemUrl.replace("%data%", projects.projects[4].url);
-    var formattedItemLink = HTMLitemUrl.replace("%text%", projects.projects[4].url);
+    // var formattedItemLink = HTMLitemUrl.replace("%text%", projects.projects[4].url);
     $('header').empty(formattedModalTitle).append(formattedModalTitle);
     $('.modal-body').empty(formattedItemDetails).append(formattedItemDetails);
     $('.modal-body').empty(formattedItemUrl).append(formattedItemUrl);
