@@ -6,7 +6,7 @@ var projects = {
 			"details": "This was an introductory exercise from Thinkful's front-end development course curriculum. We used basic JavaScript and jQuery to animate Ryu from Street Fighter.",
 			"image": ["img/projects/streetfighter.jpg"],
       "workType": "front-end mobile all",
-			"url": "http://www.steinamite.github.io/jquery-streetfighter"
+			"url": "http://www.bpstein.github.io/jquery-streetfighter"
 		}, {
 			"id": 1,
 			"name": "Tic Tac Toe",
@@ -14,7 +14,7 @@ var projects = {
 			"details": "This app was built as practice for JavaScript. The game allows two players to play a game of Tic Tac Toe online.",
 			"image": ["img/projects/tictactoe.png"],
       "workType": "front-end all",
-			"url": "http://steinamite.github.io/js-tictactoe"
+			"url": "http://bpstein.github.io/js-tictactoe"
 		}, {
 			"id": 2,
 			"name": "SearchVidz YouTube API",
@@ -22,7 +22,7 @@ var projects = {
 			"details": "This app uses the YouTube API to search videos by topic, and show results in a user-friendly format.",
 			"image": ["img/projects/youtube.jpg"],
       "workType": "front-end back-end full-stack mobile all",
-			"url": "http://steinamite.github.io/youtube-searchvidz"
+			"url": "http://bpstein.github.io/youtube-searchvidz"
 		}, {
 			"id": 3,
 			"name": "Apple Thumb Slider",
@@ -38,7 +38,7 @@ var projects = {
 			"details": "A quiz built as an introductory exercise in JavaScript. The quiz uses simple JavaScript and jQuery to guide the user through a multiple choice quiz.",
 			"image": "img/projects/marvelquiz.png",
     	"workType": "front-end projects all",
-			"url": "http://www.steinamite.github.io/marvel-quiz"
+			"url": "http://www.bpstein.github.io/marvel-quiz"
 		}, {
 			"id": 6,
 			"name": "Stack Overflow Reputation Builder",
@@ -46,7 +46,7 @@ var projects = {
 			"details": "An app that was built as an introduction to JSON and APIs. The app uses the Stack Overflow API to find the top responses on specific topics, as well as the top contributors on given topics.",
 			"image": "img/projects/stackoverflow.png",
     	"workType": "front-end projects all",
-			"url": "http://www.steinamite.github.io/ajax-stackoverflow"
+			"url": "http://www.bpstein.github.io/ajax-stackoverflow"
 		}, {
 			"id": 7,
 			"name": "Content Slider",
@@ -54,7 +54,7 @@ var projects = {
 			"details": "This is a simple jQuery content slider that could be used for displaying various content in a sliding panel.",
 			"image": "img/projects/contentslider.png",
     "workType": "front-end mobile all",
-			"url": "http://www.steinamite.github.io/content-slider"
+			"url": "http://www.bpstein.github.io/content-slider"
 		}, {
 			"id": 8,
 			"name": "Hot or Cold App",
@@ -70,7 +70,7 @@ var projects = {
 			"details": "Content slider that expands and collapses conent on request, similar to typical FAQ menus.",
 			"image": "img/projects/FAQslider.png",
       "workType": "front-end all",
-			"url": "http://www.steinamite.github.io/FAQ-slider"
+			"url": "http://www.bpstein.github.io/FAQ-slider"
 		}, {
 			"id": 10,
 			"name": "One Month Stripe",
@@ -81,12 +81,12 @@ var projects = {
 			"url": "http://bs-oms.herokuapp.com"
 		}, {
 			"id": 11, 
-			"name": "Responsive Blog Clone",
+			"name": "Vox Blog Clone",
 			"overview": "Clone of a responsive blog site",
-			"details": "A clone of a responsive blog site, demonstrating responsive styling principles.",
-			"image": "#",
-			"workType": "front-end",
-			"url": "http://www.steinamite.github.io/responsive-site"
+			"details": "A clone of a responsive blog news site, demonstrating responsive styling principles.",
+			"image": "img/projects/vox.jpg",
+			"workType": "front-end all",
+			"url": "http://www.bpstein.github.io/responsive-site"
 		}
 	]
 };
