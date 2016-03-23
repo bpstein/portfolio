@@ -38,16 +38,16 @@ $(document).ready(function() {
   projects.display(); 
 
   // ITEM JQUERY EFFECTS ON HOVER
-  $('.item').zoom({
-    duration: 250,
-    magnify: .7,
-    onZoomIn: function () {
-      $(this).parent().find('.itemHover').fadeIn(500);
-    },
-    onZoomOut: function () {
-      $(this).parent().find('.itemHover').fadeOut(400);
-    }
-  });   
+  // $('.item').zoom({
+  //   duration: 250,
+  //   magnify: .7,
+  //   onZoomIn: function () {
+  //     $(this).parent().find('.itemHover').fadeIn(500);
+  //   },
+  //   onZoomOut: function () {
+  //     $(this).parent().find('.itemHover').fadeOut(400);
+  //   }
+  // });   
 
   // STICKY H1 NAME  
   $(window).scroll(function() {
