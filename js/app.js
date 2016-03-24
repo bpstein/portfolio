@@ -16,6 +16,7 @@ $(document).ready(function() {
   var HTMLitemTitle = '<h3 class="title">%data%</h3>';
   var HTMLitemOverview = '<div class="overview"><p>%data%</p></div>';
 
+
   // APPEND HTML ELEMENTS TO PROJECT GRID
   projects.display = function() {
     for (project in projects.projects) {
@@ -29,7 +30,7 @@ $(document).ready(function() {
       $(".item:last").append(formattedItemImage); // Append image to item
       $(".item:last").append(formattedItemDescription) // Append description to overlay
         .append(formattedItemAnchor); // Append overlay to image
-      $(".overlay").append(formattedItemDescription); // Append description overlay
+       $(".overlay").append(formattedItemDescription); // Append description overlay
       $(".description:last").append(formattedItemTitle); // Append title to description
       $(".description:last").append(formattedItemOverview); // Append overview to description
     }
@@ -37,17 +38,23 @@ $(document).ready(function() {
 
   projects.display(); 
 
-  // ITEM JQUERY EFFECTS ON HOVER
-  // $('.item').zoom({
-  //   duration: 250,
-  //   magnify: .7,
-  //   onZoomIn: function () {
-  //     $(this).parent().find('.itemHover').fadeIn(500);
-  //   },
-  //   onZoomOut: function () {
-  //     $(this).parent().find('.itemHover').fadeOut(400);
-  //   }
-  // });   
+  // ****************
+  // VISUAL EFFECTS  
+  // **************** 
+
+  // ZOOM INTO IMAGES ON ITEM GRID HOVER
+  // $('.item').hover(function() {
+  //   $('.image').stop().animate({transform: "scale(1.2)"},200);
+  // });
+
+
+  $('.item').mouseover(function() {
+    $(this).addClass('image-hover').removeClass('image-static');
+  });
+
+  $('.item').mouseleave(function() {
+    $(this).addClass('image-static').removeClass('image-hover');
+  });
 
   // STICKY H1 NAME  
   $(window).scroll(function() {
