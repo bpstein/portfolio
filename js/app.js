@@ -42,12 +42,6 @@ $(document).ready(function() {
   // VISUAL EFFECTS  
   // **************** 
 
-  // ZOOM INTO IMAGES ON ITEM GRID HOVER
-  // $('.item').hover(function() {
-  //   $('.image').stop().animate({transform: "scale(1.2)"},200);
-  // });
-
-
   $('.item').mouseover(function() {
     $(this).addClass('image-hover').removeClass('image-static');
   });
@@ -140,16 +134,6 @@ $('nav li').click(function () {
 // *** NOTE ***
 // *** NOTE *** replace fixed array index number with actual item number on click ***
   var runModal = function() {
-    // Append HTML elements to the modal box
-    var appendModal =  ('<div class="modal-overlay js-modal-close"></div>');
-    var HTMLitemModalTitle = '<h3>%data%</h3>';
-    var HTMLitemDetails = '<p class="popup-detail">' + projects.projects[2].details + '</p>';
-    var HTMLitemUrl =' <a target="_blank" href="' + projects.projects[2].url + '">See the project</a>';
-    var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[2].name);
-    var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[2].details);
-    $('header').empty(formattedModalTitle).append(formattedModalTitle);
-    $('.modal-body').empty(formattedItemDetails).append(formattedItemDetails);
-    $('.modal-body').append(HTMLitemUrl);
 
     // Fire the modal on a click event
     $('a[data-modal-id]').click(function(e) {
@@ -183,8 +167,16 @@ $('nav li').click(function () {
 
   var getItem = function() {
     $('.item').click(function() {
+      // Append HTML elements to the modal box
       var itemIndex = $(this).index();
-      console.log(itemIndex);
+      var HTMLitemModalTitle = '<h3>%data%</h3>';
+      var HTMLitemDetails = '<p class="popup-detail">' + projects.projects[itemIndex].details + '</p>';
+      var HTMLitemUrl =' <a target="_blank" href="' + projects.projects[itemIndex].url + '">See the project</a>';
+      var formattedModalTitle = HTMLitemModalTitle.replace("%data%", projects.projects[itemIndex].name);
+      var formattedItemDetails = HTMLitemDetails.replace("%data%", projects.projects[itemIndex].details);
+      $('header').empty(formattedModalTitle).append(formattedModalTitle);
+      $('.modal-body').empty(formattedItemDetails).append(formattedItemDetails);
+      $('.modal-body').append(HTMLitemUrl);
     });
   }
 

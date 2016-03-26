@@ -12,6 +12,10 @@ html {
     height: 100%;
 }
 
+* {
+  text-decoration: none;
+}
+
 body {
     font-family: sans-serif;
     margin: 0; padding: 0;
@@ -77,12 +81,17 @@ GRID
   float: left;
   position: relative;
   line-height: 1em;
+  width: 20%; 
   height: auto;
   list-style: none;
+  overflow: hidden;
+  display: inline-block;
 }
 
-.grid-sizer { width: 20%; }
-.item { width: 20%; }
+.grid-sizer { 
+  width: 20%; 
+  overflow: hidden;
+}
 
 .image {
   max-width: 100%;
@@ -90,6 +99,8 @@ GRID
   max-height: 100%;
   margin: 0;
   display: block;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .image-static {
@@ -101,21 +112,26 @@ GRID
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+  overflow: hidden;
 }
 
 .image-hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .image:after {
   clear:both;
+  overflow: hidden;
+  display: inline-block;
 }
 
 .hide {
