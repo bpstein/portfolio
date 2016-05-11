@@ -126,6 +126,7 @@ GRID
   transition: all 0.35s ease-in-out;
   overflow: hidden;
   display: inline-block;
+  z-index: 5000;
 }
 
 .image:after {

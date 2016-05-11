@@ -130,9 +130,6 @@ $('nav li').click(function () {
 });
 
 // MODAL WINDOW FUNCTIONALITY 
-// *** NOTE ***
-// *** NOTE ***
-// *** NOTE *** replace fixed array index number with actual item number on click ***
   var runModal = function() {
 
     // Fire the modal on a click event
